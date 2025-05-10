@@ -15,11 +15,6 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 })
 
-// Rota inicial
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
 // Incluir usuario
 app.post('/usuarios', async (req, res) => {
   await prisma.user.create({
